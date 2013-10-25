@@ -8,6 +8,7 @@ $(function() {
     var party = $("input#party").val();
     
     $("input#zip").val('');
+    $("ul#legislators").empty();
 
     $.get("http://congress.api.sunlightfoundation.com/legislators/locate?apikey=47fbb2595169491eb7ef2af80e013a15&zip=" + zip, function(responseBody) {
       responseBody.results.forEach(function(legislator) {
